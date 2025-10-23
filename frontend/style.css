@@ -1,0 +1,97 @@
+/* Reset básico e box-sizing para consistência */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Corpo da página */
+body {
+    background-color: #f5f6fa;
+    color: #2f3640;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+/* Container central */
+.container {
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    max-width: 600px;
+    width: 100%;
+}
+
+/* Títulos */
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #2f3640;
+    font-size: 2rem;
+}
+
+/* Pergunta atual */
+.question {
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+    color: #273c75;
+}
+
+/* Área de transcrição e resumo */
+.response {
+    background-color: #f1f2f6;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    min-height: 50px;
+}
+
+/* Botões */
+button {
+    background-color: #40739e;
+    color: #ffffff;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+    margin-top: 10px;
+}
+
+button:hover {
+    background-color: #3742fa;
+}
+
+/* Áudio */
+audio {
+    width: 100%;
+    margin-top: 10px;
+}
+
+/* Mensagens de erro */
+.error {
+    color: #e84118;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .container {
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    button {
+        width: 100%;
+    }
+}

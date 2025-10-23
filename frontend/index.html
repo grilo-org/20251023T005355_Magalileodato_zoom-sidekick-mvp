@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zoom Sidekick MVP</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Entrevista Automática</h1>
+
+        <!-- Exibe a pergunta atual -->
+        <div class="question" id="question">
+            Clique em "Iniciar Gravação" para começar.
+        </div>
+
+        <!-- Botão para gravar/parar -->
+        <button id="record-btn">Iniciar Gravação</button>
+
+        <!-- Área para exibir a transcrição do usuário -->
+        <div class="response">
+            <strong>Transcrição:</strong>
+            <div id="transcription">Sem transcrição</div>
+        </div>
+
+        <!-- Área para exibir o resumo da resposta -->
+        <div class="response">
+            <strong>Resumo:</strong>
+            <div id="summary">Sem resumo</div>
+        </div>
+
+        <!-- Player de áudio da próxima pergunta -->
+        <audio id="next-question-audio" controls></audio>
+    </div>
+
+    <!-- JS para gravar áudio e interagir com o backend -->
+    <script src="recorder.js"></script>
+</body>
+</html>

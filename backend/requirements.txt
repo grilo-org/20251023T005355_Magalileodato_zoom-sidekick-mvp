@@ -1,0 +1,36 @@
+# ------------------------
+# Backend
+# ------------------------
+fastapi==0.103.2
+uvicorn[standard]==0.23.2
+pydantic==2.5.1
+python-multipart       # Necessário para receber Form e UploadFile no FastAPI
+
+# ------------------------
+# OpenAI / Inteligência Artificial
+# ------------------------
+openai==1.32.0
+whisper==1.1.10       # Pacote oficial do Whisper
+torch==2.8.0+cpu      # CPU-only para Windows
+torchaudio==2.8.0+cpu # Compatível com torch CPU
+torchvision==0.23.0+cpu
+
+# ------------------------
+# Text-to-Speech (TTS)
+# ------------------------
+gTTS==2.3.2
+
+# ------------------------
+# Manipulação de Áudio
+# ------------------------
+pydub==0.25.1
+ffmpeg-python==0.2.0
+soundfile==0.12.1
+pyaudio
+
+# ------------------------
+# Utilitários
+# ------------------------
+python-dotenv==1.0.1
+loguru==0.7.0
+requests==2.31.0

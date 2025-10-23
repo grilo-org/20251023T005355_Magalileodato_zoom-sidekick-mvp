@@ -1,0 +1,33 @@
+version: '3.9'
+
+services:
+  backend:
+    container_name: zoom-sidekick-backend
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    ports:
+      - "8000:8000"  # Expondo FastAPI
+    env_file:
+      - .env
+    volumes:
+      - ./backend:/app  # Montagem para desenvolvimento
+    networks:
+      - zoom-sidekick-net
+    restart: unless-stopped
+
+  frontend:
+    container_name: zoom-sidekick-frontend
+    image: nginx:latest
+    ports:
+      - "3000:80"  # Frontend acessível via porta 3000
+    volumes:
+      - ./frontend:/usr/share/nginx/html:ro  # Montagem do frontend
+      - ./frontend/nginx.conf:/etc/nginx/conf.d/default.conf:ro  # Config custom Nginx (opcional)
+    networks:
+      - zoom-sidekick-net
+    restart: unless-stopped
+
+networks:
+  zoom-sidekick-net:
+    driver: bridge
